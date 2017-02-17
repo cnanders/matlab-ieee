@@ -22,18 +22,18 @@ classdef IeeeUtils
     %
     % For 32-bit IEEE.754 format:
     %   bit     1       (1-bit)     === sign
-    %   bits    2-9     (8-bit)     === exponent
-    %   bits    10-32   (23-bit)    === fraction
+    %   bits    2-9     (8-bits)     === exponent
+    %   bits    10-32   (23-bits)    === fraction
     % Decimal value is sign * (1 + fraction/2^23) * 2^(exponent-127)
     %
     % For 64-bit IEEE.754 format:
     %   bit     1       (1-bit)     === sign
-    %   bits    2-12    (11-bit)    === exponent
-    %   bits    13-64   (52-bit)    === fraction  
+    %   bits    2-12    (11-bits)    === exponent
+    %   bits    13-64   (52-bits)    === fraction  
     % Decimal value is sign * (1 + fraction/2^52) * 2^(exponent - 1023)
     %
     % Example (32-bit)
-    % binary: 1 00000011 00000000000000000001011 (spaces to separate parts)
+    % binary: 1 00000011 00000000000000000001011 (spaces to separate sign, exp, frac)
     % sign = -1 (if first bit is 1, sign is negative)
     % exponent = bin2dec('00000011') = 3
     % fraction = bin2dec('00000000000000000001011') = 11

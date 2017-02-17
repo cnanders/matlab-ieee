@@ -1,12 +1,7 @@
-# Required Packages
-
-- [matlab-hex](https://github.com/cnanders/matlab-hex.git)
 
 # About
 
-Helper functions to convert between IEEE.754 64-bit and 32-bit hexadecimal strings and floating point numbers.  
-
-MATLAB’s built-in hex2num and num2hex convert between a 64-bit IEEE.754 16-char hex and a decimal value (double).  This pakcage provides support for 32-bit IEEE.754 hexadecimal strings.
+Class to convert between IEEE.754 32-bit hexadecimal strings and single-precision floating point numbers `single`.  MATLAB’s built-in hex2num and num2hex convert between a IEEE.754 64-bit 16-char hex and a double-precision decimal value `double`.  This pakcage provides support for 32-bit IEEE.754 hexadecimal strings.
 
 ## The IEEE.754 standard is a special format
 
@@ -71,4 +66,29 @@ Example (32-bit)
 - Hex equivalent of '00111111100000000000000000000000' is '3F800000',
 - Verified this is correct with Wikipedia 
 
+# Installation
 
+1. Clone this repo into your MATLAB project, preferably in a “pkgs” directory, e.g., 
+- project
+	- pkgs	
+		- matlab-ieee
+	- file1.m
+	- file2.m
+3. Add the repo to the MATLAB path, e.g., `addpath('pkgs/matlab-ieee');`
+3. Install all [required packages](#requirements) and add them to the MATLAB path in the same fashion
+- project
+	- pkgs	
+		- matlab-ieee
+		- matlab-hex
+	- file1.m
+	- file2.m
+
+<a name="requirements"></a>
+# Required Packages
+
+- [matlab-hex](https://github.com/cnanders/matlab-hex.git)
+
+
+# Hungarian Notation
+
+This repo uses [MATLAB Hungarian notation](https://github.com/cnanders/matlab-hungarian) for variable names.  
