@@ -1,7 +1,7 @@
 
 # About
 
-Class to convert between IEEE.754 32-bit hexadecimal strings and single-precision floating point numbers `single`.  MATLAB’s built-in hex2num and num2hex convert between a IEEE.754 64-bit 16-char hex and a double-precision decimal value `double`.  This pakcage provides support for 32-bit IEEE.754 hexadecimal strings.
+Class to convert between IEEE.754 32-bit hexadecimal strings and single-precision floating point numbers (`single`).  MATLAB’s built-in hex2num and num2hex convert between a IEEE.754 64-bit 16-char hex and a double-precision decimal value (`double`).  This pakcage provides support for 32-bit IEEE.754 hexadecimal strings.
 
 ## The IEEE.754 standard is a special format
 
@@ -74,7 +74,7 @@ Example (32-bit)
 		- matlab-ieee
 	- file1.m
 	- file2.m
-3. Add the repo to the MATLAB path, e.g., `addpath('pkgs/matlab-ieee');`
+2. Add the repo to the MATLAB path, e.g., `addpath('pkgs/matlab-ieee');`
 3. Install all [required packages](#requirements) and add them to the MATLAB path in the same fashion
 - project
 	- pkgs	
