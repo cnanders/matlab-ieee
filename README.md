@@ -13,11 +13,30 @@ MATLAB’s built-in hex2num and num2hex convert between a 64-bit IEEE.754 16-cha
 - [IEEE.754 Double-Precision Format Wikipedia](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - [IEEE.754 Single-Precision Format Wikipedia](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
 
-The hex string does not correspond to the standard big endian hex you would assume based on the base10 number, e.g.:
+IEE.754 hex strings do not correspond to the standard big endian hex you would assume based on the base10 int, e.g.:
 
-- 1     != 0x00000001 (32-bit hex)
-- 10    != 0x0000000A (32-bit hex)
-- 254   != 0x000000FE (32-bit hex)
+<table>
+	<tr>
+		<th>Base 10 Int</th>
+		<th>&nbsp;</th>
+		<th>32-Bit Hex</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>!=</td>
+		<td>0x00000001</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>!=</td>
+		<td>0x0000000A</td>
+	</tr>
+	<tr>
+		<td>254</td>
+		<td>!=</td>
+		<td>0x000000FE</td>
+	</tr>
+</table>
 
 The bits of a IEEE hex string have special meaning.  Step 1 is to
 convert the hex string into its binary equivalent then starting on
