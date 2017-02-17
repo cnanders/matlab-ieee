@@ -8,7 +8,7 @@ Class to convert between IEEE.754 32-bit hexadecimal strings and single-precisio
 - [IEEE.754 Double-Precision Format Wikipedia](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - [IEEE.754 Single-Precision Format Wikipedia](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
 
-IEE.754 hex strings do not correspond to the standard big endian hex you would assume based on the base10 int, e.g.:
+IEEE.754 hex strings do not correspond to the standard big endian hex you would assume based on the base10 int, e.g.:
 
 <table>
 	<tr>
@@ -68,20 +68,10 @@ Example (32-bit)
 
 # Installation
 
-1. Clone this repo into your MATLAB project, preferably in a “pkgs” directory, e.g., 
-- project
-	- pkgs	
-		- matlab-ieee
-	- file1.m
-	- file2.m
-2. Add the repo to the MATLAB path, e.g., `addpath('pkgs/matlab-ieee');`
-3. Install all [required packages](#requirements) and add them to the MATLAB path in the same fashion
-- project
-	- pkgs	
-		- matlab-ieee
-		- matlab-hex
-	- file1.m
-	- file2.m
+This repo and its dependencies are namespaced packages.  See [Working With Packages in MATLAB](https://github.com/cnanders/matlab-package-notes) for help.
+
+1. Clone this repo and the repos of all [required packages](#requirements) into your MATLAB project, preferably in a “packages” directory.  See [Recommended Project Structure](#project-structure)
+
 
 <a name="requirements"></a>
 # Required Packages
@@ -92,3 +82,14 @@ Example (32-bit)
 # Hungarian Notation
 
 This repo uses [MATLAB Hungarian notation](https://github.com/cnanders/matlab-hungarian) for variable names.  
+
+# Recommended Project Structure
+
+- project
+	- packages
+		- github
+			- cnanders	
+				- matlab-ieee **(this repo)**
+				- matlab-hex **(dependency)**
+	- file1.m
+	- file2.m
