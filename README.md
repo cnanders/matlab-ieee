@@ -70,10 +70,16 @@ Example (32-bit)
 
 This repo and its dependencies are namespaced packages.  See [Working With Packages in MATLAB](https://github.com/cnanders/matlab-package-notes) for help.
 
-1. Clone this repo and the repos of all [required packages](#requirements) into your MATLAB project, preferably in a “packages” directory.  See [Recommended Project Structure](#project-structure)
+1. Clone this repo and the repos of all [dependencies](#dependencies) into your MATLAB project, preferably in a “vendor” directory.  See [Recommended Project Structure](#project-structure)
 
+2. Add the namespaced packages to the MATLAB path, e.g., 
 
-<a name="requirements"></a>
+```
+addpath('vendor/github/cnanders/matlab-hex/pkg');
+addpath('vendor/github/cnanders/matlab-ieee/pkg');
+```
+
+<a name="dependencies"></a>
 # Required Packages
 
 - [matlab-hex](https://github.com/cnanders/matlab-hex.git)
@@ -83,6 +89,7 @@ This repo and its dependencies are namespaced packages.  See [Working With Packa
 
 This repo uses [MATLAB Hungarian notation](https://github.com/cnanders/matlab-hungarian) for variable names.  
 
+<a name="project-structure"></a>
 # Recommended Project Structure
 
 - project
