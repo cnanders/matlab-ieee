@@ -86,7 +86,7 @@ This repo uses [MATLAB Hungarian notation](https://github.com/cnanders/matlab-hu
 # Recommended Project Structure
 
 - project
-	- packages
+	- vendor
 		- github
 			- cnanders	
 				- matlab-ieee **(this repo)**
