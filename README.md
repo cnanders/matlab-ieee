@@ -80,7 +80,7 @@ addpath('vendor/github/cnanders/matlab-ieee/pkg');
 ```
 
 <a name="dependencies"></a>
-# Required Packages
+# Dependencies
 
 - [matlab-hex](https://github.com/cnanders/matlab-hex.git)
 
