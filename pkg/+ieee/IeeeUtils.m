@@ -93,7 +93,7 @@ classdef IeeeUtils
             % y: floating point value
 
             % unpack the bits
-            b = npoint.hex.HexUtils.hex2bin(x);
+            b = hex.HexUtils.hex2bin(x);
             s = b(1);
             e = b(2:9);
             f = b(10:32);
@@ -114,7 +114,7 @@ classdef IeeeUtils
         % @return {double mx1} y - single-precision floatint point
         function y = hex32ToNumMulti(x)
             
-            b = npoint.hex.HexUtils.hex2bin(x);
+            b = hex.HexUtils.hex2bin(x);
            
             % sign, exponent, fraction
             s = b(:, 1);
@@ -164,7 +164,7 @@ classdef IeeeUtils
 
             % Convert to binary, extract 64-bit sign, exponent, fraction
             % (one for each row / value)
-            cIeee64Bin = npoint.hex.HexUtils.hex2bin(cIeee64Hex);
+            cIeee64Bin = hex.HexUtils.hex2bin(cIeee64Hex);
             cIeee64SignBin = cIeee64Bin(1);
             cIeee64ExpBin = cIeee64Bin(2:12);
             cIeee64FracBin = cIeee64Bin(13:64);
@@ -202,7 +202,7 @@ classdef IeeeUtils
             
             % Assemble IEEE.754 32-bit binary representation
             cIeee32Bin = [cIeee32SignBin cIeee32ExpBin cIeee32FracBin];
-            cIeee32Hex = npoint.hex.HexUtils.hex2bin(cIeee32Bin, 8);
+            cIeee32Hex = hex.HexUtils.hex2bin(cIeee32Bin, 8);
             
         end
         
