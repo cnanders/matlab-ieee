@@ -75,8 +75,8 @@ This repo and its dependencies are namespaced packages.  See [Working With Packa
 2. Add the namespaced packages to the MATLAB path, e.g., 
 
 ```
-addpath('vendor/github/cnanders/matlab-hex/pkg');
-addpath('vendor/github/cnanders/matlab-ieee/pkg');
+addpath('vendor/github/cnanders/matlab-hex/src');
+addpath('vendor/github/cnanders/matlab-ieee/src');
 ```
 
 <a name="dependencies"></a>
