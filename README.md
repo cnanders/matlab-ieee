@@ -93,10 +93,14 @@ This repo uses [MATLAB Hungarian notation](https://github.com/cnanders/matlab-hu
 # Recommended Project Structure
 
 - project
-	- vendor
-		- github
-			- cnanders	
-				- matlab-ieee **(this repo)**
-				- matlab-hex **(dependency)**
-	- file1.m
-	- file2.m
+	- vendor/
+		- github/
+			- cnanders/	
+				- matlab-ieee/ **(this repo)**
+				- matlab-hex/ **(dependency)**
+  - src/
+	  - file1.m
+	  - file2.m
+  - tests/
+    - test1.m
+    - test2.m
