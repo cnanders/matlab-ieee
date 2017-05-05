@@ -51,19 +51,19 @@ For 64-bit IEEE.754 format:
 
 Example (32-bit)
 - binary: 1 00000011 00000000000000000001011 (spaces to separate sign, exp, frac)
-- sign = -1 (if first bit is 1, sign is negative)
+- sign = 1
 - exponent = bin2dec('00000011') = 3
 - fraction = bin2dec('00000000000000000001011') = 11
-- value = -1 * (1 + 11/2^23) * 2^-124 = -4.7020e-38
-- The hexadecimal value is '8180000B'
+- value = -1^1 * (1 + 11/2^23) * 2^(3 - 127) = -4.7020e-38
+- Hex equivalent of 1000 0001 1000 0000 0000 0000 0000 1011 is '8180000B'
 
 Example (32-bit)
-- binary: 0 01111111 00000000000000000000000
-- sign = 1
+- binary: 0 01111111 00000000000000000000000 (spaces to separate sign, exp, frac)
+- sign = 0
 - exponent = bin2dec('01111111') = 127
 - fraction = bin2dec('00000000000000000000000') = 0
-- value = 1 * (1 + 0/2^23) * 2^(127 - 127) = 1
-- Hex equivalent of '00111111100000000000000000000000' is '3F800000',
+- value = -1^0 * (1 + 0/2^23) * 2^(127 - 127) = 1
+- Hex equivalent of '0011 1111 1000 0000 0000 0000 0000 0000' is '3F800000',
 - Verified this is correct with Wikipedia 
 
 # Installation
