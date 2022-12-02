@@ -115,7 +115,16 @@ classdef IeeeUtils
         function y = hex32ToNumMulti(x)
             
             b = hex.HexUtils.hex2bin(x);
+            y = ieee.IeeeUtils.bin32ToNumMulti(b);
            
+        end
+        
+        
+        % @param {char mx32} b - 32-character binary string in IEEE.754 32-bit
+        % format
+        % @return {double mx1} y - single-precision floatint point
+        function y = bin32ToNumMulti(b)
+                       
             % sign, exponent, fraction
             s = b(:, 1);
             e = b(:, 2:9);
